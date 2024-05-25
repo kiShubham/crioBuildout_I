@@ -72,6 +72,7 @@ button:focus-visible {
     padding: 10px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: larger;
+    color: white;
   }
   .timer {
     background-color: #f9f9f9;
