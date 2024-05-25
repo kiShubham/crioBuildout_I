@@ -12,7 +12,17 @@ function App() {
     Seconds: 0,
   });
   const [minDateTime, setMinDateTime] = useState("");
+  const [maxDateTime, setMaxDateTime] = useState("");
   const [timerRunning, setTimerRunning] = useState(false);
+
+  useEffect(() => {
+    const now = new Date();
+    const localMax100days = new Date(now.getTime() + 99 * 24 * 60 * 60 * 1000)
+      .toISOString()
+      .slice(0, 16);
+
+    setMaxDateTime(localMax100days);
+  }, []);
 
   useEffect(() => {
     const now = new Date();
@@ -107,13 +117,26 @@ function App() {
             name="start"
             onChange={handleDateChange}
             min={minDateTime}
+            max={maxDateTime}
             value={targetDate}
           />
           <div className="timer">
-            <p>{timeRemaining.Days}</p>
-            <p>{timeRemaining.Hours} </p>
-            <p>{timeRemaining.Minutes}</p>
-            <p>{timeRemaining.Seconds}</p>
+            <div>
+              <p>{timeRemaining.Days}</p>
+              <p>days</p>
+            </div>
+            <div>
+              <p>{timeRemaining.Hours}</p>
+              <p>hours</p>
+            </div>
+            <div>
+              <p>{timeRemaining.Minutes}</p>
+              <p>minutes</p>
+            </div>
+            <div>
+              <p>{timeRemaining.Seconds}</p>
+              <p>seconds</p>
+            </div>
           </div>
           <div className="btns">
             <button onClick={handleStartTimer} disabled={timerRunning}>
