@@ -111,15 +111,17 @@ function App() {
 
       <div className="card">
         <div className="stopWatch">
-          <input
-            className="calender"
-            type="datetime-local"
-            name="start"
-            onChange={handleDateChange}
-            min={minDateTime}
-            max={maxDateTime}
-            value={targetDate}
-          />
+          <div className="calParent">
+            <input
+              className="calender"
+              type="datetime-local"
+              name="start"
+              onChange={handleDateChange}
+              min={minDateTime}
+              max={maxDateTime}
+              value={targetDate}
+            />
+          </div>
           <div className="timer">
             <div>
               <p>{timeRemaining.Days}</p>

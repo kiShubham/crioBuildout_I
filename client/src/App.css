@@ -69,10 +69,12 @@
   align-items: center;
   gap: 50px;
 }
+
 .btns {
   display: flex;
   gap: 20px;
 }
+
 .calender {
   border: 3px solid white;
   border-radius: 5px;
@@ -80,4 +82,17 @@
   background-color: rgba(243, 242, 241, 0.02);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: larger;
+}
+.calender {
+  border: 4px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: larger;
+  color: white;
+}
+.calParent {
+  padding: 15px;
+  background-color: #262626;
+  border-radius: 10px;
 }
