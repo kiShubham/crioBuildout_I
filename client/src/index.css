@@ -58,7 +58,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
   }
   a:hover {
     color: #747bff;
@@ -82,7 +82,7 @@ button:focus-visible {
   }
   .calParent {
     padding: 15px;
-    background-color: #262626;
+    background-color: rgba(38, 38, 38, 0.5);
     border-radius: 10px;
   }
 }
